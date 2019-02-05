@@ -383,6 +383,8 @@ class Runtime (object):
                 self._safe_process_policy_update(
                     [d['input_rule_str']], policy_name, insert=False)
 
+        db_session = None
+
         success = False  # used to rollback DB if not set to success
         try:
             rules_to_persist = []
