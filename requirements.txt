@@ -43,6 +43,7 @@ language-selector==0.1
 linecache2==1.0.0
 Mako==1.0.7
 MarkupSafe==1.0
+mock==2.0.0
 monotonic==1.5
 msgpack==0.6.1
 netaddr==0.7.19
@@ -75,7 +76,7 @@ PyJWT==1.5.3
 pyOpenSSL==17.5.0
 pyparsing==2.3.1
 pyserial==3.4
-python-apt==1.6.3
+python-apt==1.6.3+ubuntu1
 python-dateutil==2.7.5
 python-debian==0.1.32
 python-editor==1.0.3
