@@ -10,7 +10,13 @@ def reqs(*f):
     return list(filter(None, [strip_comments(l) for l in open(os.path.join(os.getcwd(), *f)).readlines()]))
 
 setup(
-    name='lagopus-birdwatcher',
+    name='birdwatcher',
+    version='0.0.1',
     install_requires=reqs('requirements.txt'),
-    test_suite='nose.collector'
+    test_suite='nose.collector',
+    entry_points={
+        "console_scripts":[
+            "birdwatcher = birdwatcher.cmd.birdwatcher_base:main"
+        ]
+    }
 )
