@@ -10,7 +10,7 @@ def reqs(*f):
     return list(filter(None, [strip_comments(l) for l in open(os.path.join(os.getcwd(), *f)).readlines()]))
 
 setup(
-    name='birdwatcher',
+    name='pylagolog',
     version='0.0.1',
     author="lagopus project team",
     author_email="lagopus-devel@lists.sourceforge.net",
@@ -20,7 +20,7 @@ setup(
     test_suite='nose.collector',
     entry_points={
         "console_scripts":[
-            "birdwatcher = birdwatcher.cmd.birdwatcher_base:main"
+            "pylagolog = pylagolog.cmd.pylagolog:main"
         ]
     }
 )
