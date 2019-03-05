@@ -1,7 +1,5 @@
 alembic==1.0.7
 amqp==2.4.0
-antlr==2.7.5rc1
-antlr-python3-runtime==3.4
 asn1crypto==0.24.0
 attrs==17.4.0
 Automat==0.6.0
