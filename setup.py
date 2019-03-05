@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 
 def strip_comments(l):
@@ -12,6 +12,10 @@ def reqs(*f):
 setup(
     name='birdwatcher',
     version='0.0.1',
+    author="lagopus project team",
+    author_email="lagopus-devel@lists.sourceforge.net",
+    license="Apache license 2.0",
+    packages=find_packages(),
     install_requires=reqs('requirements.txt'),
     test_suite='nose.collector',
     entry_points={
