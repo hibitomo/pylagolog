@@ -20,7 +20,8 @@ setup(
     test_suite='nose.collector',
     entry_points={
         "console_scripts":[
-            "pylagolog = pylagolog.cmd.pylagolog:main"
+            "pylagolog = pylagolog.cmd.pylagolog:main",
+            "lagolog-server = pylagolog.proto.server:serve"
         ]
     }
 )

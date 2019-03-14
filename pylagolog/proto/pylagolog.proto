@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package pylagolog;
+
+enum ReturnCode {
+     SUCCESS = 0;
+     ERROR = 1;
+}
+
+enum ModifyType {
+     ADD = 0;
+     DELETE = 1;
+}
+
+message ModifyRule {
+	ModifyType Type = 1;
+	string Rule = 2;
+}
+
+message Result {
+	ReturnCode Result = 1;
+}
+
+message Query {
+	string Query = 1;
+}
+
+message QueryResult {
+	string Result = 1;
+}
+
+service Datalog {
+	rpc ModRules(stream ModifyRule) returns (Result) {}
+	rpc Queries(stream Query) returns (stream QueryResult) {}
+}
