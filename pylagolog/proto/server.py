@@ -36,8 +36,12 @@ class DatalogServicer(pylagolog_pb2_grpc.DatalogServicer):
     def ModRules(self, request_iterator, context):
         LOG.info("ModRules:")
         for command in request_iterator:
-            LOG.info("%s: %s" % ("ADD" if command.Type == pylagolog_pb2.ADD else "DEL", command.Rule))
-            self.run.insert(command.Rule)
+            if command.Type == pylagolog_pb2.ADD :
+                LOG.info("ADD: %s" % command.Rule)
+                self.run.insert(command.Rule)
+            else :
+                LOG.info("DEL: %s" % command.Rule)
+                self.run.delete(command.Rule)
         return pylagolog_pb2.Result(Result = pylagolog_pb2.SUCCESS)
 
     def Queries(self, request_iterator, context):
