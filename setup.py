@@ -21,8 +21,8 @@ setup(
     entry_points={
         "console_scripts":[
             "pylagolog = pylagolog.cmd.pylagolog:main",
-            "lagolog-server = pylagolog.proto.server:serve",
-            "lagolog-client = pylagolog.proto.client:client"
+            "pylagolog-server = pylagolog.proto.server:serve",
+            "pylagolog-client = pylagolog.proto.client:client"
         ]
     }
 )
